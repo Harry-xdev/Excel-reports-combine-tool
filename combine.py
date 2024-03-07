@@ -3,8 +3,9 @@ import openpyxl
 import os
 from pathlib import Path
 
-from functions import xls_to_xlsx
 from functions import func_get_filename
+import xls_to_xlsx
+
 
 def remove_hidden_sheet(input_file):
 	workbook = openpyxl.load_workbook(input_file)
@@ -95,7 +96,7 @@ def remove_input_files(input_path, file_format):
 def running():
 
 	num = count_xlsx_file()
-	folder_path = 'output'
+	folder_path = 'converted'
 	export_filename = 'export'
 	export_file_link = export_filename + '/combined_report_' + str(num) + '.xlsx'
 
